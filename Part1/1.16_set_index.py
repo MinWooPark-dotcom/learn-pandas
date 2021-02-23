@@ -43,3 +43,23 @@ print(ndf3)
 # 90 85   98  100
 # 80 95   89   90
 # 70 100  95   90
+
+# ! my
+
+exam_data = {'이름': ['김코딩', '박해커', '최고수'],
+             '언어': ['JS', 'Python', 'C'],
+             '경력': ['1년', '2년', '3년'],
+             '취미': ['걷기', '독서', '등산'],
+             '특기': ['양궁', '축구', '노래']}
+
+df = pd.DataFrame(exam_data)
+print(df)
+print('\n')
+
+ndf = df.set_index(['이름'])
+print(ndf)
+print('\n')
+
+ndf2 = df.set_index(['언어'])
+print(ndf2)
+print('\n')

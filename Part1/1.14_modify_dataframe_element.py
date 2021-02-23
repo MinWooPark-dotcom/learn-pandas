@@ -60,3 +60,27 @@ print(df)
 #! 서준  90  98  100  50
 # 우현  80  89   95  90
 # 인아  70  95  100  90
+
+#! my
+
+exam_data = {'이름': ['김코딩', '박해커', '최고수'],
+             '언어': ['JS', 'Python', 'C'],
+             '경력': ['1년', '2년', '3년'],
+             '취미': ['걷기', '독서', '등산'],
+             '특기': ['양궁', '축구', '노래']}
+
+df = pd.DataFrame(exam_data)
+df.set_index('이름', inplace=True)
+print(df)
+print('\n')
+
+df.iloc[0][2] = '달리기'
+print(df)
+print('\n')
+
+df.loc['박해커']['취미'] = '퍼즐'
+print(df)
+print('\n')
+
+df.loc['박해커', '취미'] = '낚시'
+print(df)
